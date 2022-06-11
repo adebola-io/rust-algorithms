@@ -1,7 +1,8 @@
 /// Prompt: Write a rust function that reverses a given string.
 /// ## Example
 /// ```rust
-/// assert(reverse_string("I am"), "ma I");
+/// use rust_algorithms::reverse_string;
+/// assert_eq!(reverse_string("I am"), "ma I");
 /// ```
 pub fn reverse_string(input: &str) -> String {
     // First simulate all characters of the string into an iterator.
@@ -11,7 +12,8 @@ pub fn reverse_string(input: &str) -> String {
 
 #[test]
 fn it_reverses_string() {
-    let input = "Hello from the other side.";
-    let reversed = reverse_string(&input);
-    assert_eq!(".edis rehto eht morf olleH", reversed);
+    assert_eq!(
+        reverse_string("Hello from the other side."),
+        ".edis rehto eht morf olleH"
+    );
 }
